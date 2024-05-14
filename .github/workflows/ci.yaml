@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: [push, pull_request_target]
 
 jobs:
   build:
@@ -31,4 +31,4 @@ jobs:
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
           coverage-file: ./test-results/junit/js-test-results.xml
-          base-coverage-file: ./test-results/junit/js-test-results.xml
+          base-coverage-file: ./coverage/master/report.json
