@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="1.254">
+  <testsuite name="Division function" errors="0" failures="0" skipped="0" timestamp="2024-05-19T12:49:19" time="0.164" tests="2">
+    <testcase classname="Division function should divide two numbers correctly" name="Division function should divide two numbers correctly" time="0.002">
+    </testcase>
+    <testcase classname="Division function should throw an error when divided by zero" name="Division function should throw an error when divided by zero" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Division function" errors="0" failures="0" skipped="0" timestamp="2024-05-19T12:49:19" time="1.049" tests="2">
+    <testcase classname="Division function should divide two numbers correctly" name="Division function should divide two numbers correctly" time="0.003">
+    </testcase>
+    <testcase classname="Division function should throw an error when divided by zero" name="Division function should throw an error when divided by zero" time="0.004">
+    </testcase>
+  </testsuite>
+</testsuites>
