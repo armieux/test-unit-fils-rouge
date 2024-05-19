@@ -8,7 +8,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - uses: sonarsource/sonarqube-scan-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -26,3 +32,9 @@ jobs:
         with:
           name: junit-test-results
           path: test-results/junit/js-test-results.xml
+
+      - name : TEST JEST
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          coverage-file: ./test-results/junit/js-test-results.xml
+          base-coverage-file: ./coverage/master/report.json
